@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html lang="zh-TW">                           <!-- 要再確認語言 -->
+<!DOCTYPE html>                                                                 <!-- 黃怡諶網頁製作練習 --> 
+<html lang="zh-TW">                           <!-- 可再確認語言 -->         
 <head>
-<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>    <!-- 要再確認語言 -->
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>      <!-- 可再確認語言 -->
   <title>蛋捲抽抽樂</title>
   <style>
     /*初始畫面_框架*/
@@ -190,14 +190,14 @@
     }
     td {
       border:1px dashed black;
-      font-size: 16px;
+      font-size: 15px;
       padding: 0px;
       vertical-align: middle;
       text-align: center;
     }
     th{
       border:0px dashed black;
-      font-size: 20px;
+      font-size: 19px;
       padding: 0px;
       vertical-align: middle;
       text-align: center;
@@ -207,7 +207,7 @@
     }
     .numRolls{
       margin: 0;
-      font-size: 20px;
+      font-size: 19px;
     }
     
 
@@ -295,7 +295,7 @@
       }
     }
 
-    /*情境1巧克力中獎*/                                      /*一堆動畫腳本*//*一堆動畫腳本*//*一堆動畫腳本*/
+    /*情境1巧克力中獎*/                                     /*一堆情境腳本*//*一堆情境腳本*//*一堆情境腳本*/
     /*1巧克力口味_1巧克力中獎*/
     @keyframes ChocoC{
       0% {filter: brightness(0%);}
@@ -811,7 +811,7 @@
     var checkButton = 0;
 
     //剩餘蛋捲數量表格_數據
-    var numRollsArray = [1,2,1,1];                                     //蛋捲各種口味初始數量 初始數量  初始數量
+    var numRollsArray = [1,2,1,1];                                     //蛋捲各種口味初始數量    初始數量  初始數量
     var rollNameArray = ["Choco","Pork","Egg","Matcha"];
     var rollsPile = [];
 
@@ -831,6 +831,7 @@
     function lottery(){
       //確認是否重複按鈕                                               確認是否重複按鈕
       if(checkButton != "lottery"){
+        checkButton = "lottery";
         //動畫
         var img1 = document.querySelector(".imgChoco");
         var img2 = document.querySelector(".imgPork");
@@ -1044,7 +1045,7 @@
         document.querySelector(".monitor5").innerHTML = rollsPile;         //顯示文字用
 
         //check 按鈕狀態  if function 結尾
-        checkButton = "lottery";
+        
       }   
     }
 
@@ -1110,8 +1111,6 @@
         displayText.innerHTML = "今天可以獲得什麼口味的蛋捲呢？";
       }
       displayText.style.animation = "initial";    //要重置動畫否則無法再次進行 frames
-
-
 
       //更新剩餘數量文字
       numChocoChange.style.animation = "initial";    //要重置動畫否則無法再次進行 frames
